@@ -27,7 +27,7 @@ function back_gradient_descent(w3, W2, W1, X_train, y_train, eta)
         end
 %--------update W1,2,3---------------------
         for i = 1:n1 %w = w + eta*delta*x      
-            w3(i,1) = w3(i,1) + eta*delta3*hidden2(i);
+            w3(i,1) = w3(i,1) - eta*delta3*hidden2(i);
         end
         for i = 1:n1
                 for j = 1:n1
@@ -40,8 +40,8 @@ function back_gradient_descent(w3, W2, W1, X_train, y_train, eta)
                 end
         end
 %--------------error
-            e=o'-y;%error
-            sigma(num)=e'*e;
+            e=o-y;%error
+            sigma(num)=e*e;
             plot(sigma);
         end
 end

@@ -15,7 +15,7 @@ rng(0);
 % Percentage of data for training
 prcntof_data_for_training = 0.8;
 % Load household (1) or crimes (0) dataset
-flagData = 1;
+flagData = 0;
 % 1 means data is within [-1,1] and 0 means that we need to normalize
 normalized_data = 1;
 
