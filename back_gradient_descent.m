@@ -31,12 +31,12 @@ function back_gradient_descent(w3, W2, W1, X_train, y_train, eta)
         end
         for i = 1:n1
                 for j = 1:n1
-                     W2(i,j) = W2(i,j) + eta*delta2(i)*hidden1(j);
+                     W2(i,j) = W2(i,j) - eta*delta2(i)*hidden1(j);
                 end
         end
         for i = 1:n1
                 for j = 1:n1
-                     W1(i,j) = W1(i,j) + eta*delta1(i)*x(j);
+                     W1(i,j) = W1(i,j) - eta*delta1(i)*x(j);
                 end
         end
 %--------------error
